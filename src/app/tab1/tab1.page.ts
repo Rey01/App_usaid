@@ -38,9 +38,9 @@ export class Tab1Page {
         if(imprimir==1){
             let content ='<style type="text/css">.contenedor{position:relative;width:5.3cm;height:auto;font-family:sans-serif;overflow:auto;}.encabezado{position:relative;width:auto;height:auto;left:0cm;top:0cm;padding-top:0cm;text-align:center;font-size:14px;overflow:auto;}.numTicket{position:relative;width:auto;height:auto;left:0cm;top:0cm;text-align:center;font-family:sans-serif;font-size:14px;overflow:auto;}.detalles{position:relative;width:auto;height:auto;left:0cm;top:0cm;padding-left:0cm;padding-right:0cm;overflow:auto;}</style>';
             content += '<div class="contenedor"><div class="encabezado">Alcaldia Demo<br>Tel.: (503) 2222-2222<br/></div>';  
-            content += 'Numero: <p style="font-size:36px;margin:0px;"><strong>'+numero+'</strong></p>';
-            content += 'Monto: <p style="font-size:36px;margin:0px;"><strong>'+precio+'</strong></p>';
-            content += 'Tipo: <p style="font-size:36px;margin:0px;"><strong>'+tipo+'</strong></p>';
+            content += 'Numero: <p style="font-size:36px;margin:0px;"><strong> '+numero+' </strong></p>';
+            content += 'Monto: <p style="font-size:36px;margin:0px;"><strong> '+precio+' </strong></p>';
+            content += 'Tipo: <p style="font-size:36px;margin:0px;"><strong> '+tipo+' </strong></p>';
             content += '</div>';
             this.printer.isAvailable().then(this.exito, this.error);
 
