@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-title class="toolbar-background" style="text-align: center;padding:  0.4cm;padding-top: 0.8cm;border-radius: 0.08cm;">
+      
+      Transacciones
+    <br />
+  </ion-title>
+</ion-header>
+<ion-content>
+<ion-list>
+      <ion-item *ngIf="array.length == 0"> 
+       Listado Vacio
+      </ion-item>
+ <ion-item-sliding *ngFor="let task of array; let i = index;">
+   <ion-item >
+     <ion-label>{{ task.id_tikect }} -- {{ task.tipo }} -- {{ task.precio }} -- {{ task.puesto }}</ion-label>
+     <ion-checkbox (ionChange)="updateTask( task, i )" [checked]="task.completed"></ion-checkbox>
+   </ion-item>
+   <ion-item-options slot="end" icon-left>
+     <button ion-button color="danger" ><!--(click)="deleteTask(task, i)"-->
+       <ion-icon name="trash"></ion-icon>
+       Delete
+     </button>
+   </ion-item-options>
+ </ion-item-sliding>
+</ion-list>
+</ion-content>

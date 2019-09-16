@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-title class="toolbar-background" style="text-align: center;padding:  0.4cm;padding-top: 0.8cm;border-radius: 0.08cm;">
+      Ingresar
+    <br />
+  </ion-title>
+</ion-header>
+<ion-content>
+
+<ion-card  > <br />
+    <ion-card-header class="back center">
+      <ion-img class="imgs" src="assets\icon\splash.png"></ion-img>
+      <br />
+      <ion-card-subtitle class="defaultt">Sistema de Administración Municipal App</ion-card-subtitle>
+    </ion-card-header>
+  </ion-card>
+
+  
+    <ion-grid>
+        <ion-row>
+          <ion-col class="center">
+              <ion-item>
+                  <ion-label position="floating">Usuario</ion-label>
+                  <ion-input [(ngModel)]="usuario"></ion-input>
+              </ion-item>
+              <ion-item>
+                  <ion-label position="floating">Clave</ion-label>
+                  <ion-input type="password" [(ngModel)]="clave"></ion-input>
+              </ion-item>
+              <br />
+            <ion-button (click)="validar_usuario(usuario,clave)" size="large" color="dark" shape="round">Ingresar </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  
+</ion-content>
+<ion-footer>
+  <ion-title class="toolbar-background" style="text-align: center;padding: 0.2cm;border-radius: 0.08cm;">
+      
+    <br />
+  </ion-title>
+</ion-footer>
